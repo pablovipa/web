@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [ "*"
     # "localhost",
 ]
 #SITE_NAME = 'Roviltex'
-#d
+#dd
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -282,3 +282,10 @@ if not DEBUG:
 
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'build/static'),)
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    
+    # def application(environ, start_response):
+    # start_response('200 OK', [('Content-Type', 'text/plain')])
+    # message = 'It works!\n'
+    # version = 'Python %s\n' % sys.version.split()[0]
+    # response = '\n'.join([message, version])
+    # return [response.encode()]
