@@ -257,7 +257,7 @@ if not DEBUG:
     # comentado por aws
 
  # django-ckeditor will not work with S3 through django-storages without this line in settings.py
-    AWS_QUERYSTRING_AUTH = False
+    # AWS_QUERYSTRING_AUTH = False
 
     # aws settings
 
