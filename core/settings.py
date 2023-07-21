@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #  'RENDER' not in os.environ
+DEBUG =  'RENDER' not in os.environ # //os.environ.get('DEBUG')
 DOMAIN = os.environ.get('DOMAIN')
 ALLOWED_HOSTS = [ 
     ".vitexi.com",
@@ -44,13 +44,22 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    #'core',
+    #'tailwind', 
+    #'theme'
    
 ]
+
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+NPM_BIN_PATH="/usr/bin/npm"
+
 PROJECT_APPS=['apps.user','apps.user_profile']
 ECOMMERCE_APPS=['apps.category','apps.product','apps.cart',
                 'apps.shipping','apps.orders','apps.payment','apps.coupons','apps.wishlist',
-                'apps.reviews']
+                'apps.reviews',]
 THIRD_PARTY_APPS=[
     'corsheaders',
     'rest_framework',
@@ -279,6 +288,7 @@ if not DEBUG:
     # PUBLIC_MEDIA_LOCATION = 'media'
     # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     # DEFAULT_FILE_STORAGE = 'core.storage_backends.MediaStore'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'build/static'),)
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
