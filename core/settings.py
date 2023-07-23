@@ -1,4 +1,4 @@
-#cambio en stackoverflow
+# rr cambio en stackoverflow
 import pymysql
 
 pymysql.install_as_MySQLdb()
