@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     "www.vitexi.com",
     "127.0.0.1",
     "localhost",
+    "72.167.33.161",
 ]
 #SITE_NAME = 'Roviltex'
 #dd
