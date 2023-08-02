@@ -125,7 +125,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="mysql:///ninerogues"),
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ninerogues',
+        'USER': 'ppablovipa',
+        'PASSWORD': 'PABLOvipa.$150896',
+        'HOST': 'localhost', # Puede ser 'localhost' si es en el mismo servidor
+        'PORT': '', # Deja esto vacío para usar el puerto predeterminado (3306)
+
+    }
+}
+
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 CORS_ORIGIN_WHITELIST = [
