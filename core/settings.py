@@ -125,18 +125,24 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ninerogues',
-        'USER': 'pablovipa',
-        'PASSWORD': 'PABLOvipa.$150896',
-        'HOST': 'localhost', # Puede ser 'localhost' si es en el mismo servidor
-        'PORT': '', # Deja esto vacío para usar el puerto predeterminado (3306)
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.mysql',
+   #     'NAME': 'ninerogues',
+    #    'USER': 'pablovipa',
+     #   'PASSWORD': 'PABLOvipa.$150896',
+      #  'HOST': 'localhost', # Puede ser 'localhost' si es en el mismo servidor
+       # 'PORT': '', # Deja esto vacío para usar el puerto predeterminado (3306)
 
-    }
-}
+    #}
+#}
 
+conexion = pymysql.connect(
+    host='localhost',  # Cambia esto al nombre del host donde está tu base de datos
+    user='pablovipa',    # Cambia esto al nombre de usuario de tu base de datos
+    password='PABLOvipa.$150896',  # Cambia esto a tu contraseña de la base de datos
+    database='ninerogues'  # Cambia esto al nombre de la base de datos que deseas usar
+)
 
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 CORS_ORIGIN_WHITELIST = [
