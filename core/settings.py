@@ -137,7 +137,7 @@ DATABASES = {
     }
 }
 
-}
+
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
