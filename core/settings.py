@@ -49,7 +49,7 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'core',
+    'core',
     #'tailwind', 
     #'theme'
    
@@ -131,7 +131,7 @@ DATABASES = {
         'NAME': 'ninerogues',
         'USER': 'pablovipa',
         'PASSWORD': 'PABLOvipa.$150896',
-        'HOST': '72.167.33.161', # Puede ser 'localhost' si es en el mismo servidor
+        'HOST': 'localhost', # Puede ser 'localhost' si es en el mismo servidor
         'PORT': '', # Deja esto vacío para usar el puerto predeterminado (3306)
 
     }
@@ -145,6 +145,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'https://vitexi.com',
+    '72.167.33.161',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -153,6 +154,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'https://vitexi.com',
+    '72.167.33.161',
 ]
 
 PASSWORD_HASHERS = [
