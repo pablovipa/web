@@ -131,7 +131,7 @@ DATABASES = {
         'NAME': 'ninerogues',
         'USER': 'pablovipa',
         'PASSWORD': 'PABLOvipa.$150896',
-        'HOST': '127.0.0.1', # Puede ser 'localhost' si es en el mismo servidor
+        'HOST': '72.167.33.161', # Puede ser 'localhost' si es en el mismo servidor
         'PORT': '', # Deja esto vacío para usar el puerto predeterminado (3306)
 
     }
