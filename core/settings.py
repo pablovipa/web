@@ -129,7 +129,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ninerogues',
-        'USER': 'pppablovipa',
+        'USER': 'pablovipa',
         'PASSWORD': 'PABLOvipa.$150896',
         'HOST': 'localhost', # Puede ser 'localhost' si es en el mismo servidor
         'PORT': '', # Deja esto vacío para usar el puerto predeterminado (3306)
