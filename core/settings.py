@@ -32,7 +32,6 @@ ALLOWED_HOSTS = [
     "www.vitexi.com",
     "127.0.0.1",
     "localhost",
-    "72.167.33.161",
 ]
 #SITE_NAME = 'Roviltex'
 #dd
@@ -49,17 +48,17 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
+    #'core',
     #'tailwind', 
     #'theme'
    
 ]
 
-TAILWIND_APP_NAME = 'theme'
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
-NPM_BIN_PATH="/usr/bin/npm"
+#TAILWIND_APP_NAME = 'theme'
+#INTERNAL_IPS = [
+#    "127.0.0.1",
+#]
+#NPM_BIN_PATH="/usr/bin/npm"
 
 PROJECT_APPS=['apps.user','apps.user_profile']
 ECOMMERCE_APPS=['apps.category','apps.product','apps.cart',
@@ -145,7 +144,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'https://vitexi.com',
-    '72.167.33.161',
+    
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -154,7 +153,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'https://vitexi.com',
-    '72.167.33.161',
+    
 ]
 
 PASSWORD_HASHERS = [
